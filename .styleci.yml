@@ -8,7 +8,6 @@ enabled:
   - comment_to_phpdoc
   - concat_with_spaces
   - const_separation
-  - const_visibility_required
   - ereg_to_preg
   - include
   - logical_operators
