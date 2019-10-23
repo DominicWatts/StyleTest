@@ -59,4 +59,6 @@ finder:
     - node_modules
     - storage
     - vendor  
-  name: "*.php, *.phtml"
+  name:
+    - "*.php"
+    - "*.phtml"
