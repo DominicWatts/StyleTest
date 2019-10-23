@@ -2,6 +2,7 @@
 
 namespace Xigen\Faker\Helper;
 
+use \Magento\Catalog\Model\Product\Type;
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
@@ -24,7 +25,9 @@ class Product extends AbstractHelper
     protected $directoryList;
     protected $categoryLinkManagementInterface;
     protected $categoryHelper;
-     
+        /**
+     * @var \Magento\CatalogInventory\Helper\Stock
+     */
     protected $stockFilter;
 
     const PLACEHOLDER_SOURCE = 'http://lorempixel.com/1000/1000';
@@ -75,6 +78,9 @@ class Product extends AbstractHelper
         parent::__construct($context);
     }
 
+      /**
+       * Comment
+       */
     public function createProduct($websiteId = 1, $typeId = \Magento\Catalog\Model\Product\Type::TYPE_SIMPLE)
     {
         if(!in_array($typeId, $this->getTypeArray())) { return; }
@@ -127,6 +133,7 @@ class Product extends AbstractHelper
         }
     }
 
+    // comment
     public function reloadProduct(\Magento\Catalog\Model\Product\Interceptor $product) {
         if ($product && $product->getId()) {
             try {
