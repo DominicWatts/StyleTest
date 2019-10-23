@@ -53,3 +53,5 @@ enabled:
   - ternary_operator_spaces
   - void_return
   - whitespace_after_comma_in_array
+  
+name: "*.php, *.phtml"
