@@ -52,7 +52,6 @@ enabled:
   - standardize_not_equals
   - string_line_ending
   - ternary_operator_spaces
-  - void_return
   - whitespace_after_comma_in_array
   
 finder:
