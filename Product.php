@@ -23,8 +23,8 @@ class Product extends AbstractHelper
     
     protected $file;
     protected $directoryList;
-    protected $categoryLinkManagementInterface;
-    protected $categoryHelper;
+    protected $categoryLinkManagementInterface;   
+    protected $categoryHelper;    
         /**
      * @var \Magento\CatalogInventory\Helper\Stock
      */
@@ -47,7 +47,7 @@ class Product extends AbstractHelper
      * @param \Magento\CatalogInventory\Helper\Stock $stockFilter
      */
     public function __construct(
-        \Magento\Framework\App\Helper\Context $context,
+        \Magento\Framework\App\Helper\Context $context,   
         \Psr\Log\LoggerInterface $logger,
         \Magento\Catalog\Api\Data\ProductInterfaceFactory $productInterfaceFactory,
         \Magento\Catalog\Api\ProductRepositoryInterface $productRepositoryInterface,
@@ -74,7 +74,7 @@ class Product extends AbstractHelper
         $this->directoryList = $directoryList;
         $this->categoryLinkManagementInterface = $categoryLinkManagementInterface;
         $this->categoryHelper = $categoryHelper;
-        $this->stockFilter = $stockFilter;
+        $this->stockFilter = $stockFilter;   
         parent::__construct($context);
     }
 
@@ -87,7 +87,7 @@ class Product extends AbstractHelper
 
         $quantity = rand(1, 20);
         $product = $this->productInterfaceFactory
-            ->create()
+            ->create()   
             ->setSku('FAKER-' . strtoupper($this->faker->word) . '-' . rand(1000, 9999))
             ->setName(ucwords($this->faker->words(rand(1, 5), true)))
             ->setDecription($this->faker->paragraphs(rand(1, 4), true))
@@ -148,12 +148,12 @@ class Product extends AbstractHelper
     public function getTypeArray()
     {
         return [
-            \Magento\Catalog\Model\Product\Type::TYPE_SIMPLE,
+            Type::TYPE_SIMPLE,
             \Magento\Catalog\Model\Product\Type::TYPE_BUNDLE,
             \Magento\Catalog\Model\Product\Type::TYPE_VIRTUAL,
             \Magento\Downloadable\Model\Product\Type::TYPE_DOWNLOADABLE,
             \Magento\ConfigurableProduct\Model\Product\Type\Configurable::TYPE_CODE,
-            \Magento\GroupedProduct\Model\Product\Type\Grouped::TYPE_CODE,
+            \Magento\GroupedProduct\Model\Product\Type\Grouped::TYPE_CODE,   
         ];
     }
 
