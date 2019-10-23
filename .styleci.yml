@@ -3,6 +3,7 @@ preset: psr2
 risky: true
 
 enabled:
+  - alpha_ordered_imports
   - align_phpdoc
   - blank_line_after_opening_tag
   - comment_to_phpdoc
