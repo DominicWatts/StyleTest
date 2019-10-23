@@ -8,7 +8,6 @@ enabled:
   - blank_line_after_opening_tag
   - comment_to_phpdoc
   - concat_with_spaces
-  - const_separation
   - ereg_to_preg
   - fully_qualified_strict_types
   - include
