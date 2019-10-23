@@ -62,4 +62,4 @@ finder:
     - storage
     - vendor  
   name:
-    - "*.php|*.phtml"
+    - "*.phtml"
