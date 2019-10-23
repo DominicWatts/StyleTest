@@ -45,6 +45,7 @@ enabled:
   - phpdoc_type_to_var
   - phpdoc_types
   - phpdoc_var_without_name
+  - property_separation
   - protected_to_private
   - short_array_syntax
   - short_scalar_cast
