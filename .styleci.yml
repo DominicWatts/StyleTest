@@ -63,3 +63,4 @@ finder:
     - vendor  
   name:
     - "*.phtml"
+    - "*.php"
