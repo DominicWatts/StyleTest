@@ -11,6 +11,7 @@ enabled:
   - ereg_to_preg
   - fully_qualified_strict_types
   - include
+  - linebreak_after_opening_tag
   - logical_operators
   - no_blank_lines_after_phpdoc
   - no_blank_lines_after_return
