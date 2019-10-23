@@ -24,10 +24,25 @@ class Product extends AbstractHelper
     protected $directoryList;
     protected $categoryLinkManagementInterface;
     protected $categoryHelper;
+     
     protected $stockFilter;
 
     const PLACEHOLDER_SOURCE = 'http://lorempixel.com/1000/1000';
-
+    /**
+     * @param \Magento\Framework\App\Helper\Context $context
+     * @param \Psr\Log\LoggerInterface $logger
+     * @param \Magento\Catalog\Api\Data\ProductInterfaceFactory $productInterfaceFactory
+     * @param \Magento\Catalog\Api\ProductRepositoryInterface $productRepositoryInterface
+     * @param \Magento\CatalogInventory\Api\StockRegistryInterface $stockRegistryInterface
+     * @param \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory
+     * @param \Magento\Catalog\Api\Data\ProductLinkInterfaceFactory $productLinkInterfaceFactory
+     * @param \Magento\Catalog\Model\Product\Gallery\Processor $galleryProcessor
+     * @param \Magento\Framework\Filesystem\Io\File $file
+     * @param \Magento\Framework\App\Filesystem\DirectoryList $directoryList
+     * @param \Magento\Catalog\Api\CategoryLinkManagementInterface $categoryLinkManagementInterface
+     * @param \Xigen\Faker\Helper\Category $categoryHelper
+     * @param \Magento\CatalogInventory\Helper\Stock $stockFilter
+     */
     public function __construct(
         \Magento\Framework\App\Helper\Context $context,
         \Psr\Log\LoggerInterface $logger,
