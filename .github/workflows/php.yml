@@ -1,1 +1,10 @@
 
+name: PHPCS
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: PHPCS
+      run: docker run --rm -v $PWD:/code:ro domw/phpcs phpcs --colors --standard=PSR12 --report=full,summary,gitblame --extensions=php,phtml ./
