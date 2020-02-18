@@ -7,4 +7,4 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: PHPCS
-      run: docker run --rm -v $PWD:/code:ro domw/phpcs phpcs --colors --standard=PSR12 --report=full,summary,gitblame --extensions=php,phtml ./
+      run: docker run --rm -v $PWD:/code:ro domw/phpcs phpcs --colors --standard=PSR12 --warning-severity=0 --report=full,summary,gitblame --extensions=php,phtml ./
