@@ -11,6 +11,7 @@ use Magento\Store\Model\ScopeInterface;
 /**
  * Class LayoutRenderElement
  * @package Xigen\DeliveryComment\Observer\Frontend\Core
+ * @author someone
  */
 class LayoutRenderElement implements \Magento\Framework\Event\ObserverInterface
 {
